@@ -4,5 +4,5 @@ print("Boracar")
 print("newprint")
 
 for i in range(10):
-    logging.info('This is an info message')
+    print("waiting x seconds", flush=True)
     time.sleep(1)
