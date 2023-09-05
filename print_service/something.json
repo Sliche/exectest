@@ -1,0 +1,17 @@
+{
+  "package_name": "ferris.executorutor.packages.admin.test_logging.d6a78fd23039",
+  "package_id": "881eb644-a047-4186-94b6-d6a78fd23039",
+  "trigger_type": "manual",
+  "script_name": "scripts/ferris.executor.packages.admin.test_logging.d6a78fd23039/__init__.py",
+  "status": "completed",
+  "result": {
+    "stdout_1": "2022-10-07 10:19:44,098::DEBUG - {'debug msg': 'init'} (__init__.py:3)",
+    "stdout_2": "2022-10-07 10:19:44,955::INFO - ['info msg', 'init'] (__init__.py:4)",
+    "stdout_3": "2022-10-07 10:19:45,132::ERROR - init (__init__.py:5)",
+    "stdout_4": "2022-10-07 10:19:45,310::WARNING - ['info msg', 'init'] (__init__.py:6)",
+    "stdout_5": "2022-10-07 10:19:45,516::CRITICAL - {'debug msg': 'init'} (__init__.py:7)",
+    "stdout_6": ""
+  },
+  "error": {},
+  "total_time": 4547.3964
+}

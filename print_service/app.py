@@ -5,5 +5,5 @@ print("newprint")
 
 for i in range(10):
     print("waiting x seconds", flush=True)
-    x = a + b
+    # x = a + b
     time.sleep(1)
