@@ -1,56 +1,37 @@
 {
-  "package_name": "ferris.executorutor.packages.admin.test_logging.d6a78fd23039",
-  "package_id": "881eb644-a047-4186-94b6-d6a78fd23039",
-  "trigger_type": "manual",
-  "script_name": "scripts/ferris.executor.packages.admin.test_logging.d6a78fd23039/__init__.py",
-  "status": "completed",
-  "result": {
-    "stdout_1": "2022-10-07 10:19:44,098::DEBUG - {'debug msg': 'init'} (__init__.py:3)",
-    "stdout_2": "2022-10-07 10:19:44,955::INFO - ['info msg', 'init'] (__init__.py:4)",
-    "stdout_3": "2022-10-07 10:19:45,132::ERROR - init (__init__.py:5)",
-    "stdout_4": "2022-10-07 10:19:45,310::WARNING - ['info msg', 'init'] (__init__.py:6)",
-    "stdout_5": "2022-10-07 10:19:45,516::CRITICAL - {'debug msg': 'init'} (__init__.py:7)",
-    "stdout_6": ""
-  },
-  "error": {},
-  "total_time": 4547.3964
-}
-
-
-{
   "package_name": "ferris.executor.packages.admin.print_service.931064b30a5e",
   "package_id": "cdc254f8-fe94-415e-b4e5-931064b30a5e",
   "trigger_type": "manual",
-  "_fxcid": "7630508c-4960-435d-8ac7-0ed8d8b0583f",
+  "_fxcid": "7eae77cb-6e57-4e02-8732-bf17d8686eee",
   "script_name": "scripts/ferris.executor.packages.admin.print_service.931064b30a5e/app.py",
   "status": "failed",
   "result": {
-    "stdout_1": "Boracar\n",
-    "stdout_2": "newprint\n",
-    "stdout_3": "waiting x seconds\n",
-    "stdout_4": "waiting x seconds\n",
-    "stdout_5": "waiting x seconds\n",
-    "stdout_6": "waiting x seconds\n",
-    "stdout_7": "waiting x seconds\n",
-    "stdout_8": "waiting x seconds\n",
-    "stdout_9": "waiting x seconds\n",
-    "stdout_10": "waiting x seconds\n",
-    "stdout_11": "waiting x seconds\n",
-    "stdout_12": "waiting x seconds\n",
-    "stdout_13": "waiting x seconds\n",
-    "stdout_14": "waiting x seconds\n",
-    "stdout_15": "waiting x seconds\n",
-    "stdout_16": "waiting x seconds\n",
-    "stdout_17": "waiting x seconds\n",
-    "stdout_18": "waiting x seconds\n",
-    "stdout_19": "waiting x seconds\n",
-    "stdout_20": "waiting x seconds\n",
-    "stdout_21": "waiting x seconds\n",
-    "stdout_22": "waiting x seconds\n",
+    "stdout_1": "Boracar",
+    "stdout_2": "newprint",
+    "stdout_3": "waiting x seconds",
+    "stdout_4": "waiting x seconds",
+    "stdout_5": "waiting x seconds",
+    "stdout_6": "waiting x seconds",
+    "stdout_7": "waiting x seconds",
+    "stdout_8": "waiting x seconds",
+    "stdout_9": "waiting x seconds",
+    "stdout_10": "waiting x seconds",
+    "stdout_11": "waiting x seconds",
+    "stdout_12": "waiting x seconds",
+    "stdout_13": "waiting x seconds",
+    "stdout_14": "waiting x seconds",
+    "stdout_15": "waiting x seconds",
+    "stdout_16": "waiting x seconds",
+    "stdout_17": "waiting x seconds",
+    "stdout_18": "waiting x seconds",
+    "stdout_19": "waiting x seconds",
+    "stdout_20": "waiting x seconds",
+    "stdout_21": "waiting x seconds",
+    "stdout_22": "waiting x seconds",
     "stdout_23": "Process timed out."
   },
   "error": {
     "message": "Process timed out."
   },
-  "total_time": 20059.6045
+  "total_time": 20037.9507
 }
