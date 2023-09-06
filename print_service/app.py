@@ -8,4 +8,4 @@ for i in range(10):
     # x = a + b
     time.sleep(1)
 
-print(boretina)
+# print(boretina)
