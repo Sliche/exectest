@@ -10,8 +10,8 @@ def main():
             funcs.create_config_file()
 
         print("\nSelect an option:\n")
-        print("1. Build image with all the latest packages")
-        print("2. Option in progress")
+        print("1. Build all modules and new image with them")
+        print("2. Build new image with specific modules")
         print("3. Update 'dev_tool' config")
         print("4. Build single module")
         print("9. Exit\n")
@@ -21,8 +21,8 @@ def main():
             break
 
         switch = {
-            "1": funcs.build_image,  # Option 1
-            "2": funcs.case_b,  # Option 2
+            "1": funcs.build_image_with_all_modules,  # Option 1
+            "2": funcs.build_image_with_specific_modules,  # Option 2
             "3": funcs.update_config,
             "4": funcs.build_module
         }
