@@ -6,3 +6,4 @@ while True:
 
     print(x)
     x += 1
+    sleep(1)
