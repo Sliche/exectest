@@ -7,11 +7,8 @@ while True:
 
     print("-" * 50)
     print(x)
-    context.logging.debug("debug msg")
-    context.logging.info("info msg")
-    context.logging.error("error msg")
-    context.logging.warning("warning msg")
-    context.logging.critical("critical msg")
+    print(context.config)
+    print(context.configs)
     print("-"*50)
 
     x += 1
