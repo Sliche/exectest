@@ -9,6 +9,8 @@ while True:
     print(x)
     print(context.config)
     print(context.configs)
+    print(context.params)
+    print(context.package)
     print("-"*50)
 
     x += 1
