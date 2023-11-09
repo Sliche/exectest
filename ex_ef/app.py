@@ -13,8 +13,13 @@ while True:
     print(context.package)
     print("-"*50)
 
+    context.events.send(
+        event_type="sample_event_type",
+        data={"some_key": "some_val"}
+    )
+
     x += 1
-    sleep(1)
+    sleep(5)
 
     if x == 100:
         break
