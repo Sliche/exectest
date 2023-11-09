@@ -14,7 +14,7 @@ while True:
     print("-"*50)
 
     context.events.send(
-        event_type="sample_event_type",
+        event_type="ferris_executor.save_users_logs",
         data={"some_key": "some_val"}
     )
 
