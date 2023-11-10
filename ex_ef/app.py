@@ -14,14 +14,26 @@ while True:
     print(context.package)
     print("-"*50)
 
+    my_result_log = {
+        "result1": "somerka",
+        "result2": "somerka2",
+        "result3": "somerka3"
+    }
+
     context.events.send(
         event_type="ferris_executor.save_users_logs",
         data={
             "fxcid": "9ccdac99-ce50-4336-a9c4-ce63d18484ef",
-            "log_content": "borkica",
+            "package_name": context.params["package_name"],
+            "log_content": my_result_log,
             "last_log": False
         }
     )
+
+    # context.output.log("My Custom made logs")
+    # context.output.log("My Custom made logs")
+    # context.output.log("My Custom made logs")
+    # context.output.log("My Custom made logs", last_log=True)
 
     x += 1
     sleep(5)
