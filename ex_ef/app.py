@@ -25,7 +25,7 @@ while True:
         data={
             "fxcid": "9ccdac99-ce50-4336-a9c4-ce63d18484ef",
             "package_name": context.params["package_name"],
-            "log_content": my_result_log,
+            "result": my_result_log,
             "last_log": False
         }
     )
