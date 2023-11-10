@@ -1,3 +1,4 @@
+import uuid
 from time import sleep
 from fx_ef import context
 
@@ -15,7 +16,11 @@ while True:
 
     context.events.send(
         event_type="ferris_executor.save_users_logs",
-        data={"some_key": "some_val"}
+        data={
+            "fxcid": str(uuid.uuid4()),
+            "log_content": "borkica",
+            "last_log": False
+        }
     )
 
     x += 1
