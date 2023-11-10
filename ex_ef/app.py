@@ -17,7 +17,7 @@ while True:
     context.events.send(
         event_type="ferris_executor.save_users_logs",
         data={
-            "fxcid": str(uuid.uuid4()),
+            "fxcid": "9ccdac99-ce50-4336-a9c4-ce63d18484ef",
             "log_content": "borkica",
             "last_log": False
         }
