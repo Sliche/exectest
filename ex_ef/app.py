@@ -17,18 +17,21 @@ while True:
     my_result_log = {
         "result1": "somerka",
         "result2": "somerka2",
-        "result3": "somerka3"
+        "result3": "somerka3",
+        "result4": "jugoslovenka"
     }
 
-    context.events.send(
-        event_type="ferris_executor.save_users_logs",
-        data={
-            "fxcid": "9ccdac99-ce50-4336-a9c4-ce63d18484ef",
-            "package_name": context.params["package_name"],
-            "result": my_result_log,
-            "last_log": False
-        }
-    )
+    context.result.log(my_result_log)
+
+    # context.events.send(
+    #     event_type="ferris_executor.save_users_logs",
+    #     data={
+    #         "fxcid": "9ccdac99-ce50-4336-a9c4-ce63d18484ef",
+    #         "package_name": context.params["package_name"],
+    #         "result": my_result_log,
+    #         "last_log": False
+    #     }
+    # )
 
     # context.output.log("My Custom made logs")
     # context.output.log("My Custom made logs")
