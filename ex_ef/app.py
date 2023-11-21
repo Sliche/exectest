@@ -21,7 +21,7 @@ while True:
         "result4": "jugoslovenka"
     }
 
-    context.result.log(my_result_log)
+    context.result.save(my_result_log)
 
     # context.events.send(
     #     event_type="ferris_executor.save_users_logs",
