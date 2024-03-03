@@ -6,12 +6,16 @@ x = 1
 
 while True:
 
+    context.storage.create_bucket("borabucka")
+
     print("-" * 50)
+    print("borka korka 1")
     print(x)
     print(context.config)
     print(context.configs)
     print(context.params)
     print(context.package)
+    print("borka korka 2")
     print("-"*50)
 
     my_result_log = {
@@ -21,7 +25,8 @@ while True:
         "result4": "jugoslovenka"
     }
 
-    context.result.save(my_result_log)
+
+    # context.result.save(my_result_log)
 
     # context.events.send(
     #     event_type="ferris_executor.save_users_logs",
