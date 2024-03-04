@@ -3,8 +3,9 @@ from time import sleep
 from fx_ef import context
 
 
-
+print("creating bucket")
 context.storage.create_bucket("borabucka")
+print("bucket created")
 
 print("-" * 50)
 print("borka korka 1")
