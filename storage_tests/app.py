@@ -4,7 +4,7 @@ from fx_ef import context
 
 
 
-# context.storage.create_bucket("borabucka")
+context.storage.create_bucket("borabucka")
 
 print("-" * 50)
 print("borka korka 1")
