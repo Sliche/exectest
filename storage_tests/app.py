@@ -5,7 +5,7 @@ from fx_ef import context
 
 print("uploading file")
 # context.storage.create_bucket("borabucka")
-context.storage.upload("borabucket", "launch.dev.sh")
+context.storage.upload("borabucka", "launch.dev.sh")
 # context.storage.download("borabucka", "launch.sh")
 print("file uploaded ")
 
