@@ -5,7 +5,7 @@ from fx_ef import context
 
 print("uploading file")
 # context.storage.create_bucket("borabucka")
-context.storage.upload("borabucka", "/app/launch.sh")
+context.storage.download("borabucka", "launch.sh")
 print("file uploaded ")
 
 print("-" * 50)
