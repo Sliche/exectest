@@ -5,6 +5,7 @@ import os
 from model_parser import ModelParser
 from ferris_cli.v2.services.config import Consul
 
+print("bora executing")
 
 headers = {
     'Authorization': 'Token 254bee43c2f2a16fdf32c8620ee3914a4b294c93',
@@ -12,6 +13,7 @@ headers = {
 
 next = "https://api.replicate.com/v1/models"
 
+print("before while")
 while next:
     response = requests.get(next, headers=headers)
 
@@ -44,3 +46,4 @@ while next:
             pass
 
     sleep(5)
+print("after while")
