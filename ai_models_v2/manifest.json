@@ -1,0 +1,8 @@
+{
+  "description": "My first service",
+  "entrypoint": "app.py",
+  "allow_manual_triggering": true,
+  "active": true,
+  "tags": ["ai", "replicate", "models"],
+  "output_events": ["event1", "event2"]
+}
