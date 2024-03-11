@@ -3,7 +3,7 @@ import json
 from time import sleep
 import os
 from model_parser import ModelParser
-from ferris_cli.v2.services.config import Consul
+# from ferris_cli.v2.services.config import Consul
 
 print("bora executing")
 
