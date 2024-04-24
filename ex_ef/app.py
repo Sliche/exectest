@@ -6,24 +6,26 @@ x = 1
 
 while True:
 
-    context.storage.create_bucket("borabucka")
 
-    print("-" * 50)
-    print("borka korka 1")
-    print(x)
-    print(context.config)
-    print(context.configs)
-    print(context.params)
-    print(context.package)
-    print("borka korka 2")
-    print("-"*50)
-
-    my_result_log = {
-        "result1": "somerka",
-        "result2": "somerka2",
-        "result3": "somerka3",
-        "result4": "jugoslovenka"
-    }
+    bora_sec = context.secrets.get("bora")
+    bora_set = context.secrets.set("borasec", "value", "context")
+    
+    # context.storage.create_bucket("borabucka")
+    # print("-" * 50)
+    # print("borka korka 1")
+    # print(context.config)
+    # print(context.configs)
+    # print(context.params)
+    # print(context.package)
+    # print("borka korka 2")
+    # print("-"*50)
+    #
+    # my_result_log = {
+    #     "result1": "somerka",
+    #     "result2": "somerka2",
+    #     "result3": "somerka3",
+    #     "result4": "jugoslovenka"
+    # }
 
 
     # context.result.save(my_result_log)
