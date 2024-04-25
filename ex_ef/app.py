@@ -7,11 +7,11 @@ x = 1
 while True:
 
 
-    bora_sec = context.secrets.get("bora")
+    # bora_sec = context.secrets.get("bora")
     # bora_set = context.secrets.set("borasec", "value", "context")
 
     # bora_state = context.state.get()
-    # bora_state_set = context.state.put("boretinax", "koretinax")
+    bora_state_set = context.state.put("boretinax", "koretinax")
 
     # context.storage.create_bucket("borabucka")
     # print("-" * 50)
