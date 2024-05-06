@@ -16,7 +16,7 @@ while True:
     # print(test_state, flush=True)
 
     print("testing EVENTS functionality", flush=True)
-    context.events.send("event_type_test", "event_source_my_package", data={"test1":"test2"}, topic="testytopic", reference_id="ref_id_test")
+    context.events.send("event_type_test", "event_source_my_package", data={"test1":"test2"}, topic="ferris.events", reference_id="ref_id_test")
 
 
     # context.result.save(my_result_log)
