@@ -6,31 +6,17 @@ x = 1
 
 while True:
 
+    # print("testing SECRETs functionality", flush=True)
+    # bora_sec = context.secrets.get("testsecret")
+    # bora_set = context.secrets.set("testsecret", "value", "context")
 
-    # bora_sec = context.secrets.get("bora")
-    # print(bora_sec, flush=True)
-    # bora_set = context.secrets.set("borasec", "value", "context")
+    # print("testing STATE functionality", flush=True)
+    # test_state_set = context.state.put("testkey", "testval")
+    # test_state = context.state.get()
+    # print(test_state, flush=True)
 
-    bora_state_set = context.state.put("borkica", "korkica")
-    bora_state = context.state.get()
-    print(bora_state, flush=True)
-
-    # context.storage.create_bucket("borabucka")
-    # print("-" * 50)
-    # print("borka korka 1")
-    # print(context.config)
-    # print(context.configs)
-    # print(context.params)
-    # print(context.package)
-    # print("borka korka 2")
-    # print("-"*50)
-    #
-    # my_result_log = {
-    #     "result1": "somerka",
-    #     "result2": "somerka2",
-    #     "result3": "somerka3",
-    #     "result4": "jugoslovenka"
-    # }
+    print("testing EVENTS functionality", flush=True)
+    context.events.send("event_type_test", "event_source_my_package", data={"test1":"test2"}, topic="testytopic", reference_id="ref_id_test")
 
 
     # context.result.save(my_result_log)
