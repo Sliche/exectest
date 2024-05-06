@@ -11,12 +11,9 @@ while True:
     # print(bora_sec, flush=True)
     # bora_set = context.secrets.set("borasec", "value", "context")
 
+    bora_state_set = context.state.put("borkica", "korkica")
     bora_state = context.state.get()
     print(bora_state, flush=True)
-
-
-
-    # bora_state_set = context.state.put("boretinax", "koretinax")
 
     # context.storage.create_bucket("borabucka")
     # print("-" * 50)
