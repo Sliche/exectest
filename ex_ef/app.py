@@ -7,9 +7,9 @@ x = 1
 while True:
 
 
-    bora_sec = context.secrets.get("bora")
-    print(bora_sec, flush=True)
-    bora_set = context.secrets.set("borasec", "value", "context")
+    # bora_sec = context.secrets.get("bora")
+    # print(bora_sec, flush=True)
+    # bora_set = context.secrets.set("borasec", "value", "context")
 
     bora_state = context.state.get()
     print(bora_state, flush=True)
