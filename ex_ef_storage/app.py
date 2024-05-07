@@ -10,6 +10,9 @@ while True:
 
     with open("/tmp/testfiles.txt", "w") as file:
         file.write("test value")
+        file.close()
+
+    file = open("/tmp/testfiles.txt", 'rb')
 
     bora_set = context.storage.upload("buckettest", file)
 
