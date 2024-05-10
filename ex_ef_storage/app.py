@@ -14,7 +14,7 @@ while True:
 
     file = open("/tmp/testfiles.txt", 'rb')
 
-    upload_file = context.storage.upload("buckettest", file)
+    upload_file = context.storage.upload("buckettest", file.read())
     # download_file = context.storage.download("buckettest", "file")
 
     # print(download_file, flush=True)
