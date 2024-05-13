@@ -10,7 +10,6 @@ while True:
 
     presigned_url = context.storage.get_public_url("buckettest", "file", 5)
 
-
     print(presigned_url, flush=True)
 
     x += 1

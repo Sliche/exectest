@@ -14,10 +14,11 @@ while True:
 
     file = open("/tmp/testfiles.txt", 'rb')
 
-    # upload_file = context.storage.upload("buckettest", file)
-    download_file = context.storage.download("buckettest", "file")
+    bucket = context.storage.create_bucket("ctxbucket")
+    upload_file = context.storage.upload("ctxbucket", file)
+    # download_file = context.storage.download("buckettest", "file")
 
-    print(download_file, flush=True)
+    # print(download_file, flush=True)
 
     x += 1
     sleep(5)
