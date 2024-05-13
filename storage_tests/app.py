@@ -3,14 +3,11 @@ from time import sleep
 from fx_ef import context
 
 
-print("uploading file")
+print("downloading file")
 # context.storage.create_bucket("borabucka")
-context.storage.upload("borabucka", "launch.dev.sh")
-# context.storage.download("borabucka", "launch.sh")
-print("file uploaded ")
+# context.storage.upload("borabucka", "launch.dev.sh")
+somer = context.storage.download("borabucka", "launch.sh")
+print(somer)
 
-print("-" * 50)
-print("borka korka 1")
-print("-"*50)
 
 
