@@ -21,7 +21,7 @@ while True:
     except Exception as e:
         print("Bucket " + bucket_name + " already exists.")
 
-    # upload_file = context.storage.upload(bucket_name, file)
+    upload_file = context.storage.upload(bucket_name, file)
     # download_file = context.storage.download("buckettest", "file")
 
     # print(download_file, flush=True)
