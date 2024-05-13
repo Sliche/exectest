@@ -14,8 +14,14 @@ while True:
 
     file = open("/tmp/testfiles.txt", 'rb')
 
-    bucket = context.storage.create_bucket("ctxbucket")
-    upload_file = context.storage.upload("ctxbucket", file)
+    bucket_name = "ctxbucket"
+
+    try:
+        bucket = context.storage.create_bucket(bucket_name)
+    except Exception as e:
+        print("Bucket " + bucket_name + " already exists.")
+
+    upload_file = context.storage.upload(bucket_name, file)
     # download_file = context.storage.download("buckettest", "file")
 
     # print(download_file, flush=True)
