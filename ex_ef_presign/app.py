@@ -8,10 +8,10 @@ while True:
 
     print("testing STORAGE PRESIGN functionality", flush=True)
 
-    upload_file = context.storage.get_public_url("buckettest", file)
+    presigned_url = context.storage.get_public_url("buckettest", "file", 5)
 
 
-    print(download_file, flush=True)
+    print(presigned_url, flush=True)
 
     x += 1
     sleep(5)
