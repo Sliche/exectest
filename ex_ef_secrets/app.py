@@ -9,8 +9,8 @@ while True:
     print("testing SECRETs functionality", flush=True)
     bora_sec = context.secrets.get("testsecret")
     print(bora_sec)
-    bora_set = context.secrets.set("testsecret", "value", "context")
-    
+    # bora_set = context.secrets.set("testsecret", "value", "context")
+
 
     x += 1
     sleep(5)
