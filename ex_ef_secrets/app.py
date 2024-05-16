@@ -10,7 +10,7 @@ while True:
     # test_secret = context.secrets.get("testsecret")
     # print(test_secret)
 
-    test_secret_set = context.secrets.set("recentsecret", "value", "context")
+    test_secret_set = context.secrets.set("recentsecret", {"value": "testy"}, "project")
     print(test_secret_set)
 
     x += 1
