@@ -28,6 +28,6 @@ while True:
     print(download_file, flush=True)
 
     x += 1
-    sleep(5)
+    sleep(2)
     break
 
