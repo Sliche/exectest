@@ -8,11 +8,11 @@ while True:
 
     print("testing STORAGE functionality", flush=True)
 
-    # with open("/tmp/testfiles.txt", "w") as file:
-    #     file.write("test value")
-    #     file.close()
-    #
-    # file = open("/tmp/testfiles.txt", 'rb')
+    with open("/tmp/testfiles.txt", "w") as file:
+        file.write("test value")
+        file.close()
+
+    file = open("/tmp/testfiles.txt", 'rb')
 
     bucket_name = "ctxbucket"
 
@@ -21,11 +21,11 @@ while True:
     except Exception as e:
         print("Bucket " + bucket_name + " already exists.")
 
-    # upload_file = context.storage.upload(bucket_name, file)
-    download_file = context.storage.download("buckettest", "file", True)
+    upload_file = context.storage.upload(bucket_name, file, "bucketfilename")
+    # download_file = context.storage.download("buckettest", "file", True)
 
-    print(type(download_file))
-    print(download_file, flush=True)
+    # print(type(download_file))
+    # print(download_file, flush=True)
 
     x += 1
     sleep(2)
