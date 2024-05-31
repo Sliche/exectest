@@ -22,7 +22,7 @@ while True:
         print("Bucket " + bucket_name + " already exists.")
 
     # upload_file = context.storage.upload(bucket_name, file)
-    download_file = context.storage.download("buckettest", "file")
+    download_file = context.storage.download("buckettest", "file", True)
 
     print(type(download_file))
     print(download_file, flush=True)
