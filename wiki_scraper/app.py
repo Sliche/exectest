@@ -24,6 +24,7 @@ def scrape_wikipedia(query, sentences=2):
 
 summary = scrape_wikipedia(scrape_query)
 if summary:
+    print(summary)
     context.events.send(
         event_type="aiflow.rag.extractor.start",
         event_source="aiflow.rag.wikipediascraper",
