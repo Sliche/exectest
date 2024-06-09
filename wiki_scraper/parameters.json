@@ -1,0 +1,18 @@
+{
+  "fields": [
+    {
+      "type": "text",
+      "label": "Scrape query",
+      "name": "query",
+      "required": true,
+      "description": "Input query to scrape data from"
+    },
+    {
+      "type": "text",
+      "label": "Number of sentences",
+      "name": "sentences",
+      "required": true,
+      "description": "How many sentences of summary to return"
+    }
+  ]
+}

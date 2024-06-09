@@ -1,0 +1,9 @@
+{
+  "description": "Scrape wikipedia for the input query",
+  "entrypoint": "app.py",
+  "allow_manual_triggering": true,
+  "active": true,
+  "tags": ["ai_flow", "wikipedia"],
+  "trigger_events": [],
+  "output_events": ["aiflow.wikipedia.extractor.start"]
+}
