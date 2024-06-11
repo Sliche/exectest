@@ -3,7 +3,7 @@
     {
       "type": "text",
       "label": "Wikipedia category",
-      "name": "query",
+      "name": "category",
       "required": true,
       "description": "Category to scrape data from"
     },
