@@ -2,17 +2,17 @@
   "fields": [
     {
       "type": "text",
-      "label": "Scrape query",
+      "label": "Wikipedia category",
       "name": "query",
       "required": true,
-      "description": "Input query to scrape data from"
+      "description": "Category to scrape data from"
     },
     {
       "type": "text",
-      "label": "Number of sentences",
-      "name": "sentences",
+      "label": "Max records",
+      "name": "maxrecords",
       "required": true,
-      "description": "How many sentences of summary to return"
+      "description": "How many articles for category to process"
     }
   ]
 }

@@ -1,34 +1,77 @@
+import mwclient
 import wikipedia
+import requests
+import datetime
 from fx_ef import context
 
+category_name = context.params.get('category')
+max_records = context.params.get('maxrecords')
 
-scrape_query = context.params.get('query')
-sentances = context.params.get("sentences")
 
-
-def scrape_wikipedia(query, sentences=2):
+def get_last_modified(page):
     try:
-        # Use the summary function to get the summary of the Wikipedia page
-        summary = wikipedia.summary(query, sentences=sentences)
-        return summary
+
+        # Define the API endpoint
+        endpoint = "https://en.wikipedia.org/w/api.php"
+
+        # Define parameters for the API request
+        params = {
+            "action": "query",
+            "prop": "revisions",
+            "titles": page.title,
+            "rvlimit": 1,
+            "rvprop": "timestamp",
+            "format": "json"
+        }
+
+        # Make the API request
+        response = requests.get(endpoint, params=params)
+        data = response.json()
+
+        # Extract the timestamp of the last revision
+        page_data = next(iter(data['query']['pages'].values()))
+        revisions = page_data.get('revisions', [])
+        if revisions:
+            timestamp = revisions[0]['timestamp']
+            last_modified = datetime.datetime.strptime(timestamp, '%Y-%m-%dT%H:%M:%SZ')
+            return last_modified
+        else:
+            print(f"No revision information found for page '{page.title}'.")
+            return None
+    except wikipedia.exceptions.PageError:
+        print(f'Page "{page.title}" does not exist on Wikipedia.')
+        return None
     except wikipedia.exceptions.DisambiguationError as e:
-        # If there are multiple results for the query, print the options
-        print("DisambiguationError: There are multiple possible pages. Please be more specific:")
+        print(f'Page "{page.title}" is ambiguous. Choose one of the following options:')
         print(e.options)
         return None
-    except wikipedia.exceptions.PageError as e:
-        # If the query doesn't match any Wikipedia page
-        print("PageError: The page does not exist.")
-        return None
 
 
-summary = scrape_wikipedia(scrape_query)
-if summary:
-    print(summary)
-    context.events.send(
-        event_type="aiflow.rag.extractor.start",
-        event_source="aiflow.rag.wikipediascraper",
-        data={
-            "summary": str(summary)
-        }
-    )
+def get_category_pages(category_name):
+    try:
+        site = mwclient.Site('en.wikipedia.org')
+        category = site.Categories[category_name]
+        pages = category.members()
+        return [page.name for page in pages]
+    except mwclient.errors.InvalidCategoryName:
+        print(f'Category "{category_name}" does not exist on Wikipedia.')
+        return []
+    except mwclient.errors.MWApiError as e:
+        print(f'Error retrieving pages for category "{category_name}": {e}')
+        return []
+
+
+pages = get_category_pages(category_name)
+for page in pages:
+    if page.startswith("Category:"):
+        print(page)
+    else:
+        page_object = wikipedia.page(page, auto_suggest=False)
+        last_revision = get_last_modified(page_object)
+
+        data = {"metadata": {}, "url": page_object.url, "timestamp": str(last_revision), "collection": "wikipedia"}
+        context.events.send(
+            event_type="aiflow.rag.extractor.start",
+            event_source="aiflow.rag.wikipediascraper",
+            data=data
+        )
