@@ -33,7 +33,7 @@ def get_last_modified(page):
         revisions = page_data.get('revisions', [])
         if revisions:
             timestamp = revisions[0]['timestamp']
-            last_modified = datetime.datetime.strptime(timestamp, '%Y-%m-%dT%H:%M:%SZ')
+            last_modified = datetime.datetime.strptime(timestamp, '%Y%m%d%H%M%S')
             return last_modified
         else:
             print(f"No revision information found for page '{page.title}'.")
