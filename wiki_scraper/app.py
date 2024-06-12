@@ -5,7 +5,7 @@ import datetime
 from fx_ef import context
 
 category_name = context.params.get('category')
-max_records = context.params.get('maxrecords')
+max_records = int(context.params.get('maxrecords'))
 
 
 def get_last_modified(page):
@@ -61,18 +61,20 @@ def get_category_pages(category_name):
         print(f'Error retrieving pages for category "{category_name}": {e}')
         return []
 
-
+pages_scraped = 0
 pages = get_category_pages(category_name)
 for page in pages:
     if page.startswith("Category:"):
         print(page)
     else:
-        page_object = wikipedia.page(page, auto_suggest=False)
-        last_revision = get_last_modified(page_object)
+        if pages_scraped < max_records:
+            page_object = wikipedia.page(page, auto_suggest=False)
+            last_revision = get_last_modified(page_object)
 
-        data = {"metadata": {}, "url": page_object.url, "timestamp": str(last_revision), "collection": "wikipedia"}
-        context.events.send(
-            event_type="aiflow.rag.extractor.start",
-            event_source="aiflow.rag.wikipediascraper",
-            data=data
-        )
+            data = {"metadata": {}, "url": page_object.url, "timestamp": str(last_revision), "collection": "wikipedia"}
+            context.events.send(
+                event_type="aiflow.rag.extractor.start",
+                event_source="aiflow.rag.wikipediascraper",
+                data=data
+            )
+            pages_scraped += 1
