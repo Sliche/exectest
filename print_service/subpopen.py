@@ -10,7 +10,7 @@ from threading import Timer
 #     os.dup2(redirect_output._file.fileno(), sys.stdout.fileno())
 
 # subp_script_res = subprocess.Popen(
-#             ['python3', 'app.py'],
+#             ['python3', 'test.py'],
 #             stdout=subprocess.PIPE,
 #             stderr=subprocess.STDOUT,
 #             # timeout=5,
@@ -21,7 +21,7 @@ logfile = open('/tmp/logs/logfile.log', 'w')
 logfile_err = open('/tmp/logs/errfile.log', 'w')
 
 subp_script_res = subprocess.Popen(
-            ['python3', 'app.py'],
+            ['python3', 'test.py'],
             stdout=logfile,
             stderr=logfile_err,
             bufsize=1,
