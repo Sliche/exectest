@@ -1,0 +1,9 @@
+{
+  "description": "My first service",
+  "entrypoint": "app.py",
+  "allow_manual_triggering": true,
+  "active": true,
+  "tags": ["encryption", "test"],
+  "output_events": ["event1"],
+  "trigger_events": ["broadcasting_encrypted_data"]
+}
