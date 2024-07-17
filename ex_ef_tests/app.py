@@ -21,7 +21,7 @@ try:
         print("Bucket " + bucket_name + " already exists.")
 
     upload_file = context.storage.upload(bucket_name, file)
-    download_file = context.storage.download("testfiles.txt", "file", "/tmp/testfile.txt")
+    download_file = context.storage.download("ctxbucket", "testfiles.txt")
     print(download_file, flush=True)
     print("STORAGE working properly")
 except Exception as e:
