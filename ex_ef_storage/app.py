@@ -12,6 +12,8 @@ with open("/tmp/testfiles.txt", "w") as file:
     file.close()
 
 file = open("/tmp/testfiles.txt", 'rb')
+upload_file = context.storage.upload(bucket_name, file)
+
 
 bucket_name = "ctxbucket"
 
