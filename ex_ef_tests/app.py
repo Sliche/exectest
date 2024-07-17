@@ -42,8 +42,8 @@ sleep(1)
 
 print("testing SECRETS functionality", flush=True)
 # try:
-test_secret = context.secrets.get("recentsecret")
-print(test_secret)
+# test_secret = context.secrets.get("recentsecret")
+# print(test_secret)
 test_secret_set = context.secrets.set("recentsecret", {"value": "testy"}, "project")
 print(test_secret_set)
 # except Exception as e:
