@@ -22,7 +22,7 @@ try:
 
     upload_file = context.storage.upload(bucket_name, file)
     download_file = context.storage.download("ctxbucket", "testfiles.txt")
-    print(download_file, flush=True)
+    # print(download_file, flush=True)
     print("STORAGE working properly")
 except Exception as e:
     not_working_msg("STORAGE")
@@ -33,7 +33,7 @@ print("testing STATE functionality", flush=True)
 try:
     test_state_set = context.state.put("testkey", "testval")
     test_state = context.state.get()
-    print(test_state, flush=True)
+    # print(test_state, flush=True)
 except Exception as e:
     not_working_msg("STATE")
 
