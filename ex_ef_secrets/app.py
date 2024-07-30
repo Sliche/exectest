@@ -12,8 +12,9 @@ while True:
     print(test_secret)
 
     test_secret_set = context.secrets.set("recentsecret", {"value": "testy"}, "project")
+    print("printam secrete iz exectesta")
     print(test_secret_set)
-
+    print("zavrsio printanje secreta iz exectesta")
     # x += 1
     # sleep(5)
     break
